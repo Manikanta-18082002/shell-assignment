@@ -17,4 +17,30 @@
 # head -n 1
 
 
-sed -e 's/[^[:alpha:]]/ /g' count.txt | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | n5 
+sed -e 's/[^[:alpha:]]/ /g' count.txt | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | nl | head -n 5
+
+
+ 
+ 
+This command makes the following:
+
+Substitute all non alphanumeric characters with a blank space.
+All line breaks are converted to spaces also.
+Reduces all multiple blank spaces to one blank space
+All spaces are now converted to line breaks. Each word in a line.
+Translates all words to lower case to avoid 'Hello' and 'hello' to be different words
+Sorts de text
+Counts and remove the equal lines
+Sorts reverse in order to count the most frequent words
+Add a line number to each word in order to know the word posotion in the whole
+# This command makes the following:
+
+# Substitute all non alphanumeric characters with a blank space.
+# All line breaks are converted to spaces also.
+# Reduces all multiple blank spaces to one blank space
+# All spaces are now converted to line breaks. Each word in a line.
+# Translates all words to lower case to avoid 'Hello' and 'hello' to be different words
+# Sorts de text
+# Counts and remove the equal lines
+# Sorts reverse in order to count the most frequent words
+# Add a line number to each word in order to know the word posotion in the whole
