@@ -17,4 +17,4 @@
 # head -n 1
 
 
-sed -e 's/[^[:alpha:]]/ /g' count.txt | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | nl 
+sed -e 's/[^[:alpha:]]/ /g' count.txt | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | n5 
