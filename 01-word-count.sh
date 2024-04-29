@@ -17,7 +17,7 @@
 # head -n 1
 
 
-sed -e 's/[^[:alpha:]]/ /g' count.txt | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr  | head -n 5
+sed -e 's/[^[:alpha:]]/ /g' count.txt | tr '\n' " " |  tr -s " " | tr " " '\n'| tr 'A-Z' 'a-z' | sort | uniq -c | sort -nr | nl | head -n 5
 
 #sed: Stream Editor
 
