@@ -36,9 +36,9 @@ while read line; do
   # Split the line into columns.
   columns=($line)
 
-  # For each column, print the column name and the value.
-  for column in "${columns[@]}"; do
-    echo "$column" >> "$output_file"
+  # For each i(iterator), print the column name and the value.
+  for i in "${columns[@]}"; do
+    echo "$i" >> "$output_file"
   done
 done < "$input_file"
 
